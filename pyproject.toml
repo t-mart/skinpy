@@ -1,0 +1,21 @@
+[project]
+name = "mc_skin"
+version = "0.0.1"
+description = ""
+authors = [
+    {name = "Tim Martin", email = "tim@timmart.in"},
+]
+dependencies = [
+    "attrs>=23.1.0",
+    "numpy>=1.25.2",
+    "Pillow>=10.0.0",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ruff>=0.0.286",
+    "black>=23.7.0",
+]
