@@ -36,3 +36,6 @@ def generate_lab_space():
 
     skin.get_pil_image().save("lab_space.png")
 ```
+
+You can grab this skin for use (and others) by looking in
+[examples/skins](examples/skins).
