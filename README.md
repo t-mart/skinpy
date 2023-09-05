@@ -1,12 +1,13 @@
 # mc-skin
 
+A Python modeler/editor library for Minecraft skins. Knows how to translate a
+skin image to a 3D space and vice versa. Once in 3D, you can color the skin by
+indexing on a voxel's `x`, `y`, `z`, and `face` coordinates.
+
 ![lab color skin](./docs/lab.png)
 
-A Python modeler for Minecraft skins. Knows how to translate a skin image to a
-3D space and vice versa. Once in 3D, you can apply all sorts of cool
-mathematical functions with color spaces.
-
-The above image was generated with the following code:
+For example, as in the image above, we mapped the LAB color space to the model's
+coordinate space. The above image was generated with the following code:
 
 ```python
 import numpy as np
