@@ -23,7 +23,7 @@ dev = [
     "ruff>=0.0.286",
     "black>=23.7.0",
     "pytest>=7.4.0",
-    "scikit-image>=0.21.0",
+    "colorspacious>=1.1.2",
 ]
 
 [tool.mypy]

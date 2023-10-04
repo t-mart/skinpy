@@ -5,7 +5,7 @@ from pathlib import Path
 
 from mc_skin import Skin
 import numpy as np
-import skimage.color
+from colorspacious import cspace_convert
 
 # we want generate the skins to the test input path
 OUTPUT_PATH = Path(__file__).parent / "skins"
