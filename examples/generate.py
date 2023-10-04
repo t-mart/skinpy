@@ -3,7 +3,7 @@ Generate some example skins
 """
 from pathlib import Path
 
-from mc_skin.skin import Skin
+from mc_skin import Skin
 import numpy as np
 import skimage.color
 

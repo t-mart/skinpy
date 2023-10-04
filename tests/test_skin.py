@@ -3,7 +3,7 @@ from PIL import Image
 from pathlib import Path
 import numpy as np
 
-from mc_skin.skin import Skin, BodyPart, Face
+from mc_skin import Skin, BodyPart, Face
 
 INPUT_PATH = Path(__file__).parent / "input"
 INPUT_IMAGES = INPUT_PATH.glob("*.png")

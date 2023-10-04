@@ -76,19 +76,20 @@ class Face:
         part_shape: Coord3,
     ) -> Face:
         x_shape, y_shape, z_shape = part_shape
-        order = [s_[:], s_[::-1]]
+        # order = [s_[:], s_[::-1]]
+        order_x = s_[:]
+        order_y = s_[::-1]
         if id_ in ("up", "down"):
             image_color_shape = arr(x_shape, y_shape)
             if id_ == "up":
                 face_image_origin = arr(y_shape, 0)
             else:  # down
                 face_image_origin = arr(y_shape + x_shape, 0)
-                # order[0] = s_[::-1]
         elif id_ in ("left", "right"):
             image_color_shape = arr(y_shape, z_shape)
             if id_ == "left":
                 face_image_origin = arr(0, y_shape)
-                order[0] = s_[::-1]
+                order_x = s_[::-1]
             else:  # right
                 face_image_origin = arr(y_shape + x_shape, y_shape)
         else:  # front or back
@@ -97,7 +98,7 @@ class Face:
                 face_image_origin = arr(y_shape, y_shape)
             else:  # back
                 face_image_origin = arr(y_shape + x_shape + y_shape, y_shape)
-                order[0] = s_[::-1]
+                order_x = s_[::-1]
 
         image_color = subarray(
             data=part_image_color,
@@ -108,7 +109,7 @@ class Face:
         return cls(
             image_color=image_color,
             id_=id_,
-            order=tuple(order),
+            order=(order_x, order_y),
         )
 
     def enumerate_color(self) -> Iterator[tuple[Coord2, ImageColor]]:
