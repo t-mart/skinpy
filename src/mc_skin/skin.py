@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import TypeAlias, Any, Collection, Literal, Iterator
+from typing import Any, Collection, Literal, Iterator
 
 import numpy as np
 from numpy import s_
@@ -8,25 +8,27 @@ from attrs import frozen
 from PIL import Image
 
 # x, y, z, face, color
-ModelColor: TypeAlias = np.ndarray[tuple[int, int, int, int, int], np.dtype[np.uint8]]
+type ModelColor = np.ndarray[tuple[int, int, int, int, int], np.dtype[np.uint8]]
 
 # x, y, color
-ImageColor: TypeAlias = np.ndarray[tuple[int, int, int], np.dtype[np.uint8]]
+type ImageColor = np.ndarray[tuple[int, int, int], np.dtype[np.uint8]]
 
 # x, y, z
-Coord3: TypeAlias = np.ndarray[tuple[int], np.dtype[np.uint8]]
+type Coord3 = np.ndarray[tuple[int], np.dtype[np.uint8]]
 
 # x, y
-Coord2: TypeAlias = np.ndarray[tuple[int], np.dtype[np.uint8]]
+type Coord2 = np.ndarray[tuple[int], np.dtype[np.uint8]]
 
 # r, g, b, a
-Color: TypeAlias = np.ndarray[tuple[int], np.dtype[np.uint8]]
+type Color = np.ndarray[tuple[int], np.dtype[np.uint8]]
 
 # face identifiers
-FaceId = Literal["up", "down", "left", "right", "front", "back"]
+type FaceId = Literal["up", "down", "left", "right", "front", "back"]
 
 # body part names
-BodyPartId = Literal["head", "torso", "left_arm", "right_arm", "left_leg", "right_leg"]
+type BodyPartId = Literal[
+    "head", "torso", "left_arm", "right_arm", "left_leg", "right_leg"
+]
 
 
 # Tenet: You shouldn't be allowed to index onto unmapped voxels/pixels.
