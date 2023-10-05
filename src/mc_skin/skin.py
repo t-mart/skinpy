@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from typing import Any, Collection, Literal, Iterator
+from pathlib import Path
 
 import numpy as np
 from numpy import s_
@@ -444,6 +445,14 @@ class Skin:
         skin = cls.new()
         skin.load_pil_image(image)
         return skin
+    
+    @classmethod
+    def from_file(cls, path: Path) -> Skin:
+        """
+        Create a skin from an image file. The image should be 64x64 pixels.
+        """
+        image = Image.open(path)
+        return cls.from_pil_image(image)
 
     def get_pil_image(self) -> Image.Image:
         """
