@@ -11,6 +11,8 @@ A Python library for Minecraft skins.
 - Generate skin images for use in-game
 - Render isometric images of your skin
 
+TODO: Add support for second layer
+
 ## Quickstart
 
 ### Creating/Loading/Saving a skin
