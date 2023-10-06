@@ -6,9 +6,10 @@
 
 A Python library for Minecraft skins.
 
-- Lets you use 3D coordinates to get/set skin pixel color
-- Generates skin images for use in-game
-- Produces isometric renderings of your skin
+- Index with 3D coordinates to get/set skin pixel color
+- Operate at the skin level, the body part level, or even just one face.
+- Generate skin images for use in-game
+- Render isometric images of your skin
 
 ## Quickstart
 
