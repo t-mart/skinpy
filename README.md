@@ -82,7 +82,10 @@ skin.to_image().save("some_magenta.png")
 
 Here's an animated visualization of equivalent ways to access a certain pixel:
 
-![indexing](examples/render/steve-index.gif)
+
+<p>
+  <img src="./examples/render/steve-index.gif" alt="indexing" height=500>
+</p>
 
 (This image was made with `examples/index.py`.)
 
