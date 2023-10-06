@@ -6,10 +6,11 @@
 
 A Python library for Minecraft skins.
 
+- Load skins from a file, or start from scratch
 - Index with 3D coordinates to get/set skin pixel color
-- Operate at the skin level, the body part level, or even just one face.
+- Operate at the skin level, the body part level, or even just one face
 - Generate skin images for use in-game
-- Render isometric images of your skin
+- Render isometric ("angled/tilted view") images of your skin
 
 TODO: Add support for second layer
 
