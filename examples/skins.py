@@ -205,7 +205,7 @@ def generate_lab_space():
 
     l_space = FencedSpace.new((0, 100), z_max + 1, "z")
     a_space = FencedSpace.new((-128, 127), x_max + 1, "x")
-    b_space = FencedSpace.new((-128, 127), y_max + 1, "y")
+    b_space = FencedSpace.new((127, -128), y_max + 1, "y")
 
     for (x, y, z), _, face_id, _ in skin.enumerate_color():
         lab = (
