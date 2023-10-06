@@ -32,6 +32,15 @@ loaded_skin.to_image().save("copy.png")
 
 ### Rendering Isometric Images
 
+You can render isometric images with the CLI tool:
+
+```shell
+python -m mc_skin render steve.png -o render.png
+# see help with `python -m mc_skin render --help`
+```
+
+Or, here'e the API interface:
+
 ```python
 from pathlib import Path
 from mc_skin import Skin, Perspective

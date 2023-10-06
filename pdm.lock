@@ -6,7 +6,7 @@ groups = ["default", "dev"]
 cross_platform = true
 static_urls = false
 lock_version = "4.3"
-content_hash = "sha256:0a5292ad6ce5cff359d2e2bb87ca97ac8823fd5178aaa199cabb42ed5ad65f06"
+content_hash = "sha256:ce01aab3fa0e550b09f7e3e3b6f306109f8ff91400c8145717e7a5b65cc3740f"
 
 [[package]]
 name = "attrs"
