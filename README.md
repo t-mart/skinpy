@@ -137,5 +137,5 @@ Body parts that are "left" or "right" follow the same perspective as before: fro
 
 ## Examples
 
-You at skins/renders and the code to produce them made with mc-skin by looking
-in [examples](examples/skins).
+You can find the skins/renders, and the code to produced them, in
+[examples](examples/skins).
