@@ -10,7 +10,7 @@ A Python library for Minecraft skins.
 - Index with 3D coordinates to get/set skin pixel color
 - Operate at the skin level, the body part level, or even just one face
 - Generate skin images for use in-game
-- Render isometric ("angled/tilted view") images of your skin
+- Render isometric ("angled/tilted view", like above) images of your skin
 
 TODO: Add support for second layer
 
@@ -19,7 +19,6 @@ TODO: Add support for second layer
 ### Creating/Loading/Saving a skin
 
 ```python
-from pathlib import Path
 from mc_skin import Skin
 
 # make a new skin
@@ -27,7 +26,7 @@ new_skin = Skin.new()
 new_skin.to_image().save("blank.png")
 
 # or load a skin from disk
-loaded_skin = Skin.from_path(Path("my_skin.png"))
+loaded_skin = Skin.from_path("my_skin.png")
 loaded_skin.to_image().save("copy.png")
 ```
 
@@ -43,10 +42,9 @@ python -m mc_skin render steve.png -o render.png
 Or, here'e the API interface:
 
 ```python
-from pathlib import Path
 from mc_skin import Skin, Perspective
 
-skin = Skin.from_path(Path("steve.png"))
+skin = Skin.from_path("steve.png")
 
 # create a perspective from which to view the render
 perspective = Perspective(
@@ -67,10 +65,9 @@ Outputted file:
 ### Pixel Indexing
 
 ```python
-from pathlib import Path
 from mc_skin import Skin
 
-skin = Skin.from_path(Path("steve.png"))
+skin = Skin.from_path("steve.png")
 magenta = (211, 54, 130, 255)  # RGBA
 
 # get/set using entire skin's 3D coordinates
@@ -105,10 +102,9 @@ Here's an animated visualization of equivalent ways to access a certain pixel:
 ### Pixel Enumeration
 
 ```python
-from pathlib import Path
 from mc_skin import Skin
 
-skin = Skin.from_path(Path("steve.png"))
+skin = Skin.from_path("steve.png")
 
 for (x, y, z), body_part_id, face_id, color in skin.enumerate_color():
   print(f"{x=}, {y=}, {z=}, {body_part_id=}, {face_id=}, {color=}")

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from typing import Iterable, TYPE_CHECKING
-from pathlib import Path
 
 import numpy as np
 from numpy import s_
@@ -24,6 +23,7 @@ if TYPE_CHECKING:
         RGBA,
         FaceId,
         BodyPartId,
+        StrPath
     )
 
 
@@ -426,21 +426,23 @@ class Skin:
         return skin
 
     @classmethod
-    def from_path(cls, path: Path) -> Skin:
+    def from_path(cls, path: StrPath) -> Skin:
         """
         Create a skin from an image path.
         """
+        import shutil
+        shutil.copy(path, "test.png")
         image = Image.open(path)
         return cls.from_image(image)
 
     @property
     def body_parts(self) -> tuple[BodyPart, ...]:
         return (
-            self.right_leg,
             self.left_leg,
-            self.right_arm,
-            self.torso,
+            self.right_leg,
             self.left_arm,
+            self.torso,
+            self.right_arm,
             self.head,
         )
 
@@ -459,7 +461,7 @@ class Skin:
             return self.right_leg
 
     @property
-    def shape(self) -> tuple[int, int, int]:
+    def shape(self) -> R3:
         # x, y, z
         return (16, 8, 32)
 
@@ -480,7 +482,9 @@ class Skin:
                 yield offset, body_part.id_, face_id, color
 
     def get_color(self, x: int, y: int, z: int, face: FaceId) -> ImageColor:
+        # search for the coordinates
         for bp in self.body_parts:
+            # are we inside or on this body part? origin guaranteed to have min value
             if (
                 (bp.model_origin[0] <= x < bp.model_origin[0] + bp.shape[0])
                 and (bp.model_origin[1] <= y < bp.model_origin[1] + bp.shape[1])

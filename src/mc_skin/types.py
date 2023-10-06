@@ -1,4 +1,5 @@
 from typing import Literal
+from pathlib import Path
 
 import numpy as np
 
@@ -31,3 +32,5 @@ type PolygonPoints = tuple[
     tuple[int, int],
     tuple[int, int],
 ]
+
+type StrPath = str | Path

@@ -198,6 +198,7 @@ def render_isometric(
     polys: Sequence[Polygon],
     background_color: tuple[int, int, int, int] | None = None,
 ) -> Image.Image:
+    # get bounding box
     min_x = min(poly.min_x for poly in polys)
     max_x = max(poly.max_x for poly in polys)
     min_y = min(poly.min_y for poly in polys)

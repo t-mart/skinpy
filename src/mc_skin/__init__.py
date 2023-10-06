@@ -25,4 +25,6 @@ from mc_skin.types import (
     ZFaceId as ZFaceId,
     FaceId as FaceId,
     BodyPartId as BodyPartId,
+    PolygonPoints as PolygonPoints,
+    StrPath as StrPath,
 )
