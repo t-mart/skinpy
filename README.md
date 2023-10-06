@@ -138,4 +138,4 @@ Body parts that are "left" or "right" follow the same perspective as before: fro
 ## Examples
 
 You can find the skins/renders, and the code to produced them, in
-[examples](examples/skins).
+[examples](./examples).
