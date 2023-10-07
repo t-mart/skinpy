@@ -1,7 +1,7 @@
 # Skinpy
 
 <p align="center">
-  <img src="./examples/render/lab_space.png" alt="isometric render" height=300>
+  <img src="https://raw.githubusercontent.com/t-mart/skinpy/master/examples/render/lab_space.png" alt="isometric render" height=300>
 </p>
 
 A Python library for Minecraft skins.
@@ -60,7 +60,7 @@ skin.to_isometric_image(perspective).save("render.png")
 
 Outputted file:
 
-![outputted file](./docs/steve-render.png)
+![outputted file](https://github.com/t-mart/skinpy/raw/master/docs/steve-render.png)
 
 ### Pixel Indexing
 
@@ -92,9 +92,8 @@ skin.to_image().save("some_magenta.png")
 
 Here's an animated visualization of equivalent ways to access a certain pixel:
 
-
 <p>
-  <img src="./examples/render/steve-index.gif" alt="indexing" height=500>
+  <img src="https://github.com/t-mart/skinpy/raw/master/examples/render/steve-index.gif" alt="indexing" height=500>
 </p>
 
 (This image was made with `examples/index.py`.)
@@ -121,7 +120,7 @@ for (x, y), face_id, color in skin.torso.back.enumerate_color():
 Skinpy uses a coordinate system with the origin at the left-down-front of the
 skin **from the perspective of an observer looking at the skin**.
 
-![coordinate system](./docs/coordsys.png)
+![coordinate system](https://github.com/t-mart/skinpy/raw/master/docs/coordsys.png)
 
 ## `FaceId`
 
