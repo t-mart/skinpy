@@ -1,6 +1,6 @@
 [project]
 name = "skinpy"
-version = "0.0.2"
+version = "0.0.3"
 description = "A Python library for Minecraft skins"
 authors = [
     {name = "Tim Martin", email = "tim@timmart.in"},
@@ -12,8 +12,18 @@ dependencies = [
     "click>=8.1.7",
 ]
 requires-python = ">=3.12,<3.13"
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+]
 readme = "README.md"
 license = {text = "MIT"}
+
+[project.scripts]
+skinpy = "skinpy.__main__:cli"
+
+[project.urls]
+repository = "https://github.com/t-mart/skinpy"
 
 [build-system]
 requires = ["pdm-backend"]
