@@ -14,6 +14,12 @@ A Python library for Minecraft skins.
 
 TODO: Add support for second layer
 
+## Installation
+
+```shell
+pip install skinpy
+```
+
 ## Quickstart
 
 ### Creating/Loading/Saving a skin
@@ -35,8 +41,8 @@ loaded_skin.to_image().save("copy.png")
 You can render isometric images with the CLI tool:
 
 ```shell
-python -m skinpy render steve.png -o render.png
-# see help with `python -m skinpy render --help`
+skinpy render steve.png -o render.png
+# see help with `skinpy render --help`
 ```
 
 Or, here'e the API interface:

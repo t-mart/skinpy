@@ -26,9 +26,6 @@ if TYPE_CHECKING:
         StrPath
     )
 
-# TODO: Find better name
-# TODO: Publish
-# TODO: Installation docs
 # TODO: Fix upside down renders
 # TODO: Second layer
 
