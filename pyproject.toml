@@ -1,7 +1,7 @@
 [project]
 name = "skinpy"
 version = "0.0.2"
-description = ""
+description = "A Python library for Minecraft skins"
 authors = [
     {name = "Tim Martin", email = "tim@timmart.in"},
 ]
