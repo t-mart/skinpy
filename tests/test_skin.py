@@ -5,7 +5,7 @@ from itertools import product
 import numpy as np
 from PIL import Image
 
-from mc_skin import (
+from skinpy import (
     Skin,
     BodyPart,
     Face,

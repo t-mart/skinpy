@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from PIL import Image, ImageOps, ImageDraw, ImageFont
-from mc_skin import Skin, Perspective
+from skinpy import Skin, Perspective
 
 FONT_SIZE = SCALING_FACTOR = 40
 FONT = ImageFont.truetype("courbd.ttf", FONT_SIZE)  # Courier New

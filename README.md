@@ -1,4 +1,4 @@
-# mc-skin
+# Skinpy
 
 <p align="center">
   <img src="./examples/render/lab_space.png" alt="isometric render" height=300>
@@ -19,7 +19,7 @@ TODO: Add support for second layer
 ### Creating/Loading/Saving a skin
 
 ```python
-from mc_skin import Skin
+from skinpy import Skin
 
 # make a new skin
 new_skin = Skin.new()
@@ -35,14 +35,14 @@ loaded_skin.to_image().save("copy.png")
 You can render isometric images with the CLI tool:
 
 ```shell
-python -m mc_skin render steve.png -o render.png
-# see help with `python -m mc_skin render --help`
+python -m skinpy render steve.png -o render.png
+# see help with `python -m skinpy render --help`
 ```
 
 Or, here'e the API interface:
 
 ```python
-from mc_skin import Skin, Perspective
+from skinpy import Skin, Perspective
 
 skin = Skin.from_path("steve.png")
 
@@ -65,7 +65,7 @@ Outputted file:
 ### Pixel Indexing
 
 ```python
-from mc_skin import Skin
+from skinpy import Skin
 
 skin = Skin.from_path("steve.png")
 magenta = (211, 54, 130, 255)  # RGBA
@@ -102,7 +102,7 @@ Here's an animated visualization of equivalent ways to access a certain pixel:
 ### Pixel Enumeration
 
 ```python
-from mc_skin import Skin
+from skinpy import Skin
 
 skin = Skin.from_path("steve.png")
 
@@ -118,7 +118,7 @@ for (x, y), face_id, color in skin.torso.back.enumerate_color():
 
 ## Coordinate system
 
-mc-skin uses a coordinate system with the origin at the left-down-front of the
+Skinpy uses a coordinate system with the origin at the left-down-front of the
 skin **from the perspective of an observer looking at the skin**.
 
 ![coordinate system](./docs/coordsys.png)

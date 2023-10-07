@@ -2,7 +2,7 @@ from pathlib import Path
 
 import click
 
-from mc_skin import Skin, Perspective, XFaceId, YFaceId, ZFaceId
+from skinpy import Skin, Perspective, XFaceId, YFaceId, ZFaceId
 
 
 @click.group()

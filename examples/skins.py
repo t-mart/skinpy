@@ -11,7 +11,7 @@ import numpy as np
 from colorspacious import cspace_convert  # type: ignore
 from matplotlib import colors
 
-from mc_skin import Skin, FaceId, RGBA, Perspective
+from skinpy import Skin, FaceId, RGBA, Perspective
 
 SKINS_PATH = Path(__file__).parent / "skins"
 RENDER_PATH = Path(__file__).parent / "render"

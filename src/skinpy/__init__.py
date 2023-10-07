@@ -4,18 +4,18 @@
 # > re-export of the symbol.
 # See https://github.com/microsoft/pylance-release/issues/856#issuecomment-763793949
 
-from mc_skin.skin import (
+from skinpy.skin import (
     Skin as Skin,
     BodyPart as BodyPart,
     Face as Face,
     UnmappedVoxelError as UnmappedVoxelError,
 )
 
-from mc_skin.render import (
+from skinpy.render import (
     Perspective as Perspective,
 )
 
-from mc_skin.types import (
+from skinpy.types import (
     ImageColor as ImageColor,
     R3 as R3,
     R2 as R2,

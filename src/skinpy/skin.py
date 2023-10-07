@@ -7,16 +7,16 @@ from numpy import s_
 from attrs import frozen
 from PIL import Image
 
-from mc_skin.render import (
+from skinpy.render import (
     Polygon,
     get_iso_polys,
     Perspective,
     render_isometric,
 )
-from mc_skin.exception import UnmappedVoxelError, InputImageException
+from skinpy.exception import UnmappedVoxelError, InputImageException
 
 if TYPE_CHECKING:
-    from mc_skin.types import (
+    from skinpy.types import (
         ImageColor,
         R3,
         R2,
@@ -25,6 +25,12 @@ if TYPE_CHECKING:
         BodyPartId,
         StrPath
     )
+
+# TODO: Find better name
+# TODO: Publish
+# TODO: Installation docs
+# TODO: Fix upside down renders
+# TODO: Second layer
 
 
 def _subarray(*, data: ImageColor, origin: R2, offset: R2) -> ImageColor:

@@ -1,5 +1,5 @@
 [project]
-name = "mc_skin"
+name = "skinpy"
 version = "0.0.1"
 description = ""
 authors = [

@@ -8,7 +8,7 @@ from attrs import frozen
 
 
 if TYPE_CHECKING:
-    from mc_skin.types import (
+    from skinpy.types import (
         RGBA,
         XFaceId,
         YFaceId,
