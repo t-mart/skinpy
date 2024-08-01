@@ -1,6 +1,6 @@
 [project]
 name = "skinpy"
-version = "0.0.3"
+version = "0.0.4"
 description = "A Python library for Minecraft skins"
 authors = [
     {name = "Tim Martin", email = "tim@timmart.in"},
@@ -35,11 +35,11 @@ build-backend = "pdm.backend"
 
 [tool.pdm.dev-dependencies]
 dev = [
-    "ruff>=0.0.292",
-    "black>=23.9.1",
-    "pytest>=7.4.0",
-    "colorspacious>=1.1.2",
-    "matplotlib>=3.8.0",
+    "ruff",
+    "black",
+    "pytest",
+    "colorspacious",
+    "matplotlib",
 ]
 
 [tool.mypy]
