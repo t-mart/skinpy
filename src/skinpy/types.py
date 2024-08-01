@@ -1,36 +1,36 @@
-from typing import Literal
+from typing import Literal, Union
 from pathlib import Path
 
 import numpy as np
 
 # x, y, color
-type ImageColor = np.ndarray[tuple[int, int, int], np.dtype[np.uint8]]
+ImageColor = np.ndarray[tuple[int, int, int], np.dtype[np.uint8]]
 
 # (x, y, z)
-type R3 = tuple[int, int, int]
+R3 = tuple[int, int, int]
 
 # (x, y)
-type R2 = tuple[int, int]
+R2 = tuple[int, int]
 
 # (r, g, b, a)
-type RGBA = tuple[int, int, int, int]
+RGBA = tuple[int, int, int, int]
 
 # face identifiers
-type XFaceId = Literal["left", "right"]
-type YFaceId = Literal["front", "back"]
-type ZFaceId = Literal["up", "down"]
-type FaceId = XFaceId | YFaceId | ZFaceId
+XFaceId = Literal["left", "right"]
+YFaceId = Literal["front", "back"]
+ZFaceId = Literal["up", "down"]
+FaceId = Union[XFaceId, YFaceId, ZFaceId]
 
 # body part names
-type BodyPartId = Literal[
+BodyPartId = Literal[
     "head", "torso", "left_arm", "right_arm", "left_leg", "right_leg"
 ]
 
-type PolygonPoints = tuple[
+PolygonPoints = tuple[
     tuple[int, int],
     tuple[int, int],
     tuple[int, int],
     tuple[int, int],
 ]
 
-type StrPath = str | Path
+StrPath = Union[str, Path]

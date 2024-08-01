@@ -25,7 +25,7 @@ PERSPECTIVE = Perspective(
 
 
 # collect all the functions that generate images with the @collect decorator
-type ImgGenFn = Callable[[], None]
+ImgGenFn = Callable[[], None]
 img_gen_fns: list[ImgGenFn] = []
 
 
@@ -34,7 +34,7 @@ def collect(func: ImgGenFn) -> ImgGenFn:
     return func
 
 
-type Axis = Literal["x", "y", "z"]
+Axis = Literal["x", "y", "z"]
 
 
 @frozen

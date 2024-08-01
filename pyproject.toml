@@ -4,15 +4,19 @@ version = "0.0.3"
 description = "A Python library for Minecraft skins"
 authors = [
     {name = "Tim Martin", email = "tim@timmart.in"},
+    {name = "Steven Van Ingelgem", email = "steven@vaningelgem.be"},
 ]
 dependencies = [
-    "attrs>=23.1.0",
-    "numpy>=1.26.0",
-    "Pillow>=10.0.0",
-    "click>=8.1.7",
+    "attrs",
+    "numpy",
+    "Pillow",
+    "click",
 ]
-requires-python = ">=3.12,<3.13"
+requires-python = ">=3.9"
 classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "License :: OSI Approved :: MIT License",
 ]
