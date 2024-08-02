@@ -4,7 +4,7 @@ Generate some example skins
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Callable, Literal, ClassVar, cast, Any
+from typing import Callable, Literal, ClassVar, TypeAlias, cast, Any
 
 from attr import frozen
 import numpy as np
@@ -25,7 +25,7 @@ PERSPECTIVE = Perspective(
 
 
 # collect all the functions that generate images with the @collect decorator
-type ImgGenFn = Callable[[], None]
+ImgGenFn: TypeAlias = Callable[[], None]
 img_gen_fns: list[ImgGenFn] = []
 
 
@@ -34,7 +34,7 @@ def collect(func: ImgGenFn) -> ImgGenFn:
     return func
 
 
-type Axis = Literal["x", "y", "z"]
+Axis: TypeAlias = Literal["x", "y", "z"]
 
 
 @frozen
