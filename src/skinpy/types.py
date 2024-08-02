@@ -1,36 +1,34 @@
-from typing import Literal, Union
+from typing import Literal, Union, TypeAlias
 from pathlib import Path
 
 import numpy as np
 
 # x, y, color
-ImageColor = np.ndarray[tuple[int, int, int], np.dtype[np.uint8]]
+ImageColor: TypeAlias = np.ndarray[tuple[int, int, int], np.dtype[np.uint8]]
 
 # (x, y, z)
-R3 = tuple[int, int, int]
+R3: TypeAlias = tuple[int, int, int]
 
 # (x, y)
-R2 = tuple[int, int]
+R2: TypeAlias = tuple[int, int]
 
 # (r, g, b, a)
-RGBA = tuple[int, int, int, int]
+RGBA: TypeAlias = tuple[int, int, int, int]
 
 # face identifiers
-XFaceId = Literal["left", "right"]
-YFaceId = Literal["front", "back"]
-ZFaceId = Literal["up", "down"]
-FaceId = Union[XFaceId, YFaceId, ZFaceId]
+XFaceId: TypeAlias = Literal["left", "right"]
+YFaceId: TypeAlias = Literal["front", "back"]
+ZFaceId: TypeAlias = Literal["up", "down"]
+FaceId: TypeAlias = Union[XFaceId, YFaceId, ZFaceId]
 
 # body part names
-BodyPartId = Literal[
-    "head", "torso", "left_arm", "right_arm", "left_leg", "right_leg"
+BodyPartId: TypeAlias = Literal["head", "torso", "left_arm", "right_arm", "left_leg", "right_leg"]
+
+PolygonPoints: TypeAlias = tuple[
+    tuple[int, int],
+    tuple[int, int],
+    tuple[int, int],
+    tuple[int, int],
 ]
 
-PolygonPoints = tuple[
-    tuple[int, int],
-    tuple[int, int],
-    tuple[int, int],
-    tuple[int, int],
-]
-
-StrPath = Union[str, Path]
+StrPath: TypeAlias = Union[str, Path]
